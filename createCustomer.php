@@ -3,15 +3,15 @@
 
 
 require_once('./stripe-php/init.php');
-\Stripe\Stripe::setApiKey('sk_test_nPdYeoBLMmIE4lYcuX0ixLc700aonA2sCZ');
+\Stripe\Stripe::setApiKey('sk_test_c8WpTVTZOQnrqvqWXJJLaTeQ00whht62Tb');
 
 
 $email =  $_POST['email'] ;
 $fullName = $_POST['name'];
-$phone	= $_POST['phone'];
+$phone    = $_POST['phone'];
 
 $key = \Stripe\Customer::create([
-  'description' => 'testing','email'=>"$email",'phone'=>"$phone", 'name'=>$fullName
+  'description' => 'testing','email'=>"$email",'phone'=>"$phone", 'name'=>"$fullName"
 ]);
 
 
