@@ -5,7 +5,7 @@ try{
 
     require_once('./stripe-php/init.php');
 
-    \Stripe\Stripe::setApiKey('sk_test_c8WpTVTZOQnrqvqWXJJLaTeQ00whht62Tb');
+    \Stripe\Stripe::setApiKey($_POST['stripeSecretKey']);
 
     if (!isset($_POST['amount']) || !isset($_POST['currency']))
     {

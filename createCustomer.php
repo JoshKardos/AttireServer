@@ -3,8 +3,7 @@
 
 
 require_once('./stripe-php/init.php');
-\Stripe\Stripe::setApiKey('sk_test_c8WpTVTZOQnrqvqWXJJLaTeQ00whht62Tb');
-
+\Stripe\Stripe::setApiKey($_POST['stripeSecretKey']);
 
 $email =  $_POST['email'] ;
 $fullName = $_POST['name'];
